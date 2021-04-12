@@ -44,6 +44,9 @@ function success(res, payload) {
   return res.status(200).json(payload);
 }
 
+app.get('/', (req, res) => { res.send('Hello from Express!');
+
+
 app.get("/todos", async (req, res, next) => {
   try {
     const todos = await db.Todo.find({});
